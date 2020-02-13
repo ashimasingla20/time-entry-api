@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose, { Mongoose } from 'mongoose';
 
 const Schema = mongoose.Schema;
 
@@ -18,5 +18,9 @@ export const TaskSchema = new Schema({
     endTime: {
       type: Date,
       default: Date.now
+    },
+    user: {
+      type: mongoose.Schema.ObjectId,
+      ref: 'User'
     }
 });
