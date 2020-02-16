@@ -17,13 +17,6 @@ const routes = (app) => {
     .post(login);
   app.route('/tasks')
     .get(checkAuthenticated, getTasksOfUser)
-
-  // app.route('/contact/:contactID')
-  //     .put((req,res) =>
-  //     res.send('PUT request successful!'))
-
-  //     .delete((req,res) =>
-  //     res.send('DELETE request successful!'));
 }
 
 export default routes;
